@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { AssignHoursPage } from '../assign-hours/assign-hours';
 
 @Component({
   selector: 'page-list',
@@ -19,7 +20,7 @@ export class ListPage {
     'american-football', 'boat', 'bluetooth', 'build'];
 
     this.items = [];
-    for (let i = 1; i < 11; i++) {
+    for (let i = 1; i < 3; i++) {
       this.items.push({
         title: 'Item ' + i,
         note: 'This is item #' + i,
@@ -33,5 +34,11 @@ export class ListPage {
     this.navCtrl.push(ListPage, {
       item: item
     });
+  }
+
+
+  onAssignHours()
+  {
+    this.navCtrl.push(AssignHoursPage);
   }
 }
