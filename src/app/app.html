@@ -6,9 +6,14 @@
   </ion-header>
 
   <ion-content>
+    <h3 align="center">{{userName}}</h3>
+     
     <ion-list>
       <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
         {{p.title}}
+      </button>
+      <button menuClose ion-item (click)="CloseSession()">
+            Logout
       </button>
     </ion-list>
   </ion-content>

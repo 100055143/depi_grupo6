@@ -22,8 +22,8 @@ export class ListPage {
     this.items = [];
     for (let i = 1; i < 3; i++) {
       this.items.push({
-        title: 'Item ' + i,
-        note: 'This is item #' + i,
+        title: 'Project ' + i,
+        note: 'Unit ' + i,
         icon: this.icons[Math.floor(Math.random() * this.icons.length)]
       });
     }

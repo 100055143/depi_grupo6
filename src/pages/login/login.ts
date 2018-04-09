@@ -4,13 +4,6 @@ import { AlertController } from 'ionic-angular';
 import { AuthProvider } from '../../providers/auth/auth';
 import { ListPage } from '../list/list';
 
-/**
- * Generated class for the LoginPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-
 @Component({
   selector: 'page-login',
   templateUrl: 'login.html',
@@ -31,16 +24,21 @@ export class LoginPage {
   }
 
 
-  onLogin()
+  OnLogin()
   {
-   let alert = this.alertCtrl.create({
-    title: 'Login',
-    subTitle: 'Login successful',
-    buttons: ['ok']
-    });
-    alert.present();
-
-    this.navCtrl.push(ListPage);
+    this.auth.loginUser(this.user.email,this.user.password ).then((user) => 
+    {   
+        
+    }
+    )
+     .catch(err=>{
+      let alert = this.alertCtrl.create({
+        title: 'Error',
+        subTitle: err.message,
+        buttons: ['Aceptar']
+      });
+      alert.present();
+    })
   }
 
     signin()

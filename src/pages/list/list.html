@@ -3,12 +3,16 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Analyst</ion-title>
+    <ion-title>Time</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
-    <button ion-button full (click)="onAssignHours()">Assign Hours</button>
+    <div align="right">
+        <button ion-button icon-only (click)="onAssignHours()">
+            <ion-icon name="add"></ion-icon>
+        </button>
+    </div>
 
   <ion-list>
     <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
@@ -19,7 +23,5 @@
       </div>
     </button>
   </ion-list>
-  <div *ngIf="selectedItem" padding>
-    You navigated here from <b>{{selectedItem.title}}</b>
-  </div>
+  <div *ngIf="selectedItem" padding></div>
 </ion-content>
