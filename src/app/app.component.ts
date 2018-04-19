@@ -3,11 +3,13 @@ import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { AuthProvider } from '../providers/auth/auth';
-
 import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
 import { ListPage } from '../pages/list/list';
+import { AddUnitPage } from '../pages/add-unit/add-unit'
+import { AddProjectPage } from '../pages/add-project/add-project'
 import { AssignHoursPage } from '../pages/assign-hours/assign-hours';
+
 
 @Component({
   templateUrl: 'app.html'
@@ -17,6 +19,7 @@ export class MyApp {
 
   rootPage: any = HomePage;
   public userName : string = null;
+  hideLogout: boolean = null;
 
   pages: Array<{title: string, component: any}>;
 
@@ -27,11 +30,11 @@ export class MyApp {
   {
     this.initializeApp();
 
-    // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Home', component: HomePage },
-      //{ title: 'Login', component: LoginPage },
-      { title: 'Time', component: ListPage }
+      { title: 'Time', component: ListPage },
+      { title: 'Add Unit', component: AddUnitPage },
+      { title: 'Add Project', component: AddProjectPage }
 
     ];
 
@@ -45,12 +48,13 @@ export class MyApp {
         if(session)
           {
             this.rootPage = ListPage;
-
+            this.hideLogout = false;
             this.userName = session.email;
 
           }
           else
           {
+            this.hideLogout = true;
             this.rootPage = LoginPage;
           }
       });
@@ -68,6 +72,7 @@ export class MyApp {
   CloseSession()
   {
       this.auth.logout();
+      this.hideLogout = true;
   }
  
 }

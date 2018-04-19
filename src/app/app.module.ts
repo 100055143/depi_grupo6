@@ -11,10 +11,16 @@ import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
 import { ListPage } from '../pages/list/list';
 import { AssignHoursPage } from '../pages/assign-hours/assign-hours';
+import { AddUnitPage } from '../pages/add-unit/add-unit'
+import { AddProjectPage } from '../pages/add-project/add-project'
+import { UnitPage } from '../pages/unit/unit';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { AuthProvider } from '../providers/auth/auth';
+import { UnitService } from '../services/unit.service';
+import { ProjectService } from '../services/project.service';
+import { TimeService } from '../services/time.service';
 
 
 export const firebaseConfig = {
@@ -33,7 +39,10 @@ export const firebaseConfig = {
     HomePage,
     LoginPage,
     ListPage,
-    AssignHoursPage
+    AssignHoursPage,
+    AddUnitPage,
+    AddProjectPage,
+    UnitPage
   ],
   imports: [
     BrowserModule,
@@ -48,13 +57,19 @@ export const firebaseConfig = {
     HomePage,
     LoginPage,
     ListPage,
-    AssignHoursPage
+    AssignHoursPage,
+    AddUnitPage,
+    AddProjectPage,
+    UnitPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    AuthProvider
+    AuthProvider,
+    UnitService,
+    ProjectService,
+    TimeService
   ]
 })
 export class AppModule {}

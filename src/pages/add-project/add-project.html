@@ -1,0 +1,35 @@
+<ion-header>
+
+  <ion-navbar>
+      <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+      </button>
+    <ion-title>addProject</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <form (ngSubmit)="OnAddProject(f.value)" #f="ngForm">
+        <ion-list>
+            <ion-item>
+                <ion-label color="primary">Unit:</ion-label>
+                <ion-select name="units" [(ngModel)]="units" multiple="false">
+                    <ion-option *ngFor="let item of units$ | async">
+                        {{item.name}}
+                    </ion-option>
+                </ion-select>
+            </ion-item>
+
+            <ion-item>
+                <ion-label color="primary">Project:</ion-label>
+                <ion-input name="name" [(ngModel)]="projects" placeholder="Project"></ion-input>
+            </ion-item>
+        </ion-list>
+
+        <button ion-button block type="submit" [disabled]="!f.valid">Aceptar</button>
+    </form>
+
+</ion-content>
