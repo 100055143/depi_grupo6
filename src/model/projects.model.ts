@@ -1,7 +1,7 @@
 ﻿export interface projects
 {
     key?: string;
-    unitName: string;
     name: string;
-
+    fecha_desde: string;
+    fecha_hasta: string;
 }

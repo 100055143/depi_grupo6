@@ -32,9 +32,9 @@ export class MyApp {
 
     this.pages = [
       { title: 'Home', component: HomePage },
-      { title: 'Time', component: ListPage },
-      { title: 'Add Unit', component: AddUnitPage },
-      { title: 'Add Project', component: AddProjectPage }
+      { title: 'Revisión de horas', component: ListPage },
+      { title: 'Añadir unidad', component: AddUnitPage },
+      { title: 'Añadir proyecto', component: AddProjectPage }
 
     ];
 

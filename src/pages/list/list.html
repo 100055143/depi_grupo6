@@ -3,28 +3,56 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Time</ion-title>
+    <ion-title>Revisión de horas</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
-    <div align="right">
-        <button ion-button icon-only (click)="onAssignHours()">
-            <ion-icon name="add"></ion-icon>
-        </button>
+    <div align="center">
+        <p><strong> {{userName}} </strong></p>
+    </div>
+    <div>
+        <ion-select placeholder="Seleccione unidad" type="ion-select" [(ngModel)]="unidad" name="unidad" ngModel required>
+            <ion-option *ngFor="let item of units$ | async">
+                {{item.name}}
+            </ion-option>
+        </ion-select>
     </div>
 
-  <ion-list>
 
 
-    <button ion-item *ngFor="let item of units$ | async" (click)="itemTapped($event, item)">
-      {{item.name}}
-    </button>
-       
-      <!--<div class="item-note" item-end>
-          {{item.name}}
-      </div>-->
+    <!--<ion-select [(ngModel)]="task">
+        <ng-container *ngFor="let task of tasks">
+            <ion-option [value]="task" *ngIf="task.ProjectId == project.Id">{{task.Title}}</ion-option>
+        </ng-container>
+    </ion-select>-->
 
-  </ion-list>
-  <!-- <div *ngIf="selectedItem" padding></div> -->
+
+    <ion-list>
+
+       <!-- <button ion-item *ngFor="let item of dbs$ | async" (click)="itemTapped($event, item)">
+            <p> {{item}}</p>
+        </button>-->
+
+        <button ion-item *ngFor="let item of registros$ | async" (click)="itemTapped($event, item)">
+            <!--<ng-container [value]="item" *ngIf="item.unit == unidad">-->
+                <p><strong>Nombre del proyecto: </strong>{{item.proyecto}}</p>
+                <p><strong>Horas: </strong>{{item.horas}}</p>
+                <p><strong>Minutos: </strong>{{item.minutos}}</p>
+                <p><strong>Fecha: </strong>{{item.fecha}}</p>
+                <p><strong>Tipo: </strong> Horas normales</p>
+            <!--</ng-container>-->
+        </button>
+
+        <button ion-item *ngFor="let item of tareas$ | async" (click)="itemExtraTapped($event, item)">
+            <p><strong>Unidad: </strong>{{item.unidad}}</p>
+            <p><strong>Nombre del proyecto: </strong>{{item.proyecto}}</p>
+            <p><strong>Horas: </strong>{{item.horas}}</p>
+            <p><strong>Minutos: </strong>{{item.minutos}}</p>
+            <p><strong>Fecha: </strong>{{item.fecha}}</p>
+            <p><strong>Tipo:</strong> Horas extra</p>
+        </button>
+        
+    </ion-list>
+    
 </ion-content>

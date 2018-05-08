@@ -4,7 +4,7 @@
       <button ion-button menuToggle>
           <ion-icon name="menu"></ion-icon>
       </button>
-    <ion-title>Add Unit</ion-title>
+    <ion-title>Añadir Unidad</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -14,8 +14,8 @@
     <form (ngSubmit)="OnAddUnit(f.value)" #f="ngForm">
         <ion-list>
             <ion-item>
-                <ion-label color="primary">Unit:</ion-label>
-                <ion-input name="name" [(ngModel)]="units" placeholder="Unit"></ion-input>
+                <ion-label color="primary">Unidad:</ion-label>
+                <ion-input name="name" [(ngModel)]="units" placeholder="Unidad"></ion-input>
             </ion-item>
         </ion-list>
         <button ion-button block type="submit" [disabled]="!f.valid">Aceptar</button>

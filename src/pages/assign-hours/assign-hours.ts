@@ -18,11 +18,13 @@ import { projects } from '../../model/projects.model';
 export class AssignHoursPage 
 {
  units$: Observable<unit[]>;
+ projects$: Observable<projects[]>;
 
   constructor(public navCtrl: NavController, 
               public navParams: NavParams,
               afDatabase: AngularFireDatabase,
-              private UnitService: UnitService) 
+              private UnitService: UnitService,
+              private ProjectService: ProjectService) 
   {
     
   }
@@ -38,6 +40,19 @@ export class AssignHoursPage
            key: c.payload.key, ...c.payload.val()
          }));
        });
+
+
+
+      this.projects$ = this.ProjectService
+      .getAllProjects()
+      .snapshotChanges()
+      .map(
+       changes => {
+         return changes.map(c=> ({
+           key: c.payload.key, ...c.payload.val()
+         }));
+       });
+
   }
 
   ionViewDidLoad() 

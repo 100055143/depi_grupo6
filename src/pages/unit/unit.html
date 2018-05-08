@@ -20,15 +20,18 @@
 
         <ion-item>
             <ion-label color="primary">Unit:</ion-label>
-            <ion-input type="text" [(ngModel)]="unit.name" name="name" ngModel required></ion-input>
+            <ion-input type="text" [(ngModel)]="unit.name" name="name" disabled="true" ngModel required></ion-input>
         </ion-item>
-        <!--<ion-item>
-            <ion-label color="primary">Unit:</ion-label>
+
+        <ion-item>
+            <ion-label color="primary">Project:</ion-label>
             <ion-select name="projects" [(ngModel)]="projects" multiple="false">
-                <ion-option *ngFor="let item of units$ | async">
+                <ion-option *ngFor="let item of projects$ | async">
                     {{item.name}}
                 </ion-option>
             </ion-select>
-        </ion-item>-->
+        </ion-item>
+     
+
     </ion-list>
 </ion-content>

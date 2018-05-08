@@ -21,22 +21,15 @@
 
             <ion-item>
                 <ion-label color="primary">Project:</ion-label>
-                <ion-select  multiple="false">
-                    <ion-option>Project 1</ion-option>
-                    <ion-option>Project 2</ion-option>
-                    <ion-option>Project 3</ion-option>
+                <ion-select name="projects" [(ngModel)]="projects" multiple="false">
+                    <ion-option *ngFor="let item of projects$ | async">
+                        {{item.name}}
+                    </ion-option>
                 </ion-select>
             </ion-item>
 
-            <ion-item>
-                <ion-label color="primary">Hours:</ion-label>
-                <ion-input placeholder="Hours"></ion-input>
-            </ion-item>
-            <ion-item>
-                <ion-label color="primary">Minutes:</ion-label>
-                <ion-input placeholder="Minutes"></ion-input>
-            </ion-item> 
-                  
+
+                                                                  
         </ion-list>
 
 

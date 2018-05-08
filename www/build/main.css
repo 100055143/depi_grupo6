@@ -25677,3 +25677,11 @@ ion-navbar.toolbar {
   min-height: calc(46px + constant(safe-area-inset-bottom));
   min-height: calc(46px + env(safe-area-inset-bottom));
 }
+
+page-list ion-select {
+  max-width: 70% !important;
+}
+
+page-ver-registro ion-select {
+  max-width: 70% !important;
+}

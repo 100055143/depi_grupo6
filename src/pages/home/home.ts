@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { LoginPage } from '../login/login';
+import { AuthProvider } from '../../providers/auth/auth';
+import { TodoService } from '../../services/todo.service';
+import { RegisterService } from '../../services/register.service';
 
 @Component({
   selector: 'page-home',
@@ -8,7 +11,15 @@ import { LoginPage } from '../login/login';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
+
+
+  public userName : string = null;
+  public userUnidad : any = null;
+
+  constructor(public navCtrl: NavController, 
+              public auth : AuthProvider,
+              private RegisterService: RegisterService,
+              private TodoService: TodoService) {
 
   }
 
@@ -16,4 +27,18 @@ export class HomePage {
   {
     this.navCtrl.push(LoginPage);
   }
+
+    ionViewWillEnter()
+  {
+
+      this.auth.Session.subscribe(session=>{
+      if(session){
+          this.userName = session.email;
+          this.RegisterService.recibirmail(this.userName);
+          this.TodoService.recibirmail(this.userName);   
+                }    
+        }
+      );
+
+   }
 }

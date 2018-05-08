@@ -1,13 +1,18 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from 'angularfire2/auth';
-import { AngularFireDatabase } from 'angularfire2/database';
+import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
 import * as firebase from 'firebase/app';
+import { UserModel } from '../../model/user.model';
+
+
+
 
 @Injectable()
 export class AuthProvider 
 {
 
-  constructor(private afAuth :  AngularFireAuth) 
+  constructor(private afAuth :  AngularFireAuth,
+              private db: AngularFireDatabase) 
   {
     console.log('Hello AuthProvider Provider');
   }
@@ -47,7 +52,5 @@ export class AuthProvider
  {
    this.afAuth.auth.signOut().then(()=>{ })
  }
-
-
 
 }

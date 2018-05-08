@@ -7,6 +7,8 @@ import { UnitService } from '../../services/unit.service';
 import { Observable } from 'rxjs/Observable';
 import { ListPage } from '../list/list';
 import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
+import { AlertController } from 'ionic-angular';
+
 
 
 @IonicPage()
@@ -47,9 +49,9 @@ export class AddProjectPage
   }
 
 
-  OnAddProject(value: projects)
+  OnAddProject(value: projects, valueUnit: unit)
   {
-    this.ProjectService.addProject(value).then(ref => { console.log(ref.key); });
+    this.ProjectService.addProject(value, valueUnit).then(ref => { console.log(ref.key); });
     this.navCtrl.push(ListPage);
   }
 }
