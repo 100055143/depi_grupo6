@@ -1,0 +1,23 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Unidades</ion-title>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+    <ion-icon ion-button (click)="onAddUnit()"> + </ion-icon>
+
+    <ion-list>
+        <ion-item ion-item *ngFor="let item of units$ | async">
+            <p><strong>Unidad:</strong> {{ item.name }}</p>
+            <p><strong>Fecha desde:</strong> {{ item.fechadesde }} </p>
+            <p><strong>Fecha hasta:</strong> {{ item.fechahasta }} </p>
+        </ion-item>
+    </ion-list>
+
+</ion-content>

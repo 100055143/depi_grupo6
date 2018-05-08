@@ -10,11 +10,14 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
 import { ListPage } from '../pages/list/list';
+import { AdminPage } from '../pages/admin/admin';
 import { AddUnitPage } from '../pages/add-unit/add-unit'
 import { AddProjectPage } from '../pages/add-project/add-project'
-import { UnitPage } from '../pages/unit/unit';
 import { VerRegistroPage } from '../pages/ver-registro/ver-registro';
 import { VerHorasExtraPage } from '../pages/ver-horas-extra/ver-horas-extra';
+import { VerunidadesPage } from '../pages/verunidades/verunidades';
+import { VerproyectosPage } from '../pages/verproyectos/verproyectos';
+import { DashboardPage } from '../pages/dashboard/dashboard';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -53,11 +56,14 @@ export const firebaseConfig = {
     HomePage,
     LoginPage,
     ListPage,
+    AdminPage,
     AddUnitPage,
     AddProjectPage,
-    UnitPage,
     VerRegistroPage,
-    VerHorasExtraPage
+    VerHorasExtraPage,
+    VerunidadesPage,
+    VerproyectosPage,
+    DashboardPage
   ],
   imports: [
     BrowserModule,
@@ -74,9 +80,12 @@ export const firebaseConfig = {
     ListPage,
     AddUnitPage,
     AddProjectPage,
-    UnitPage,
     VerRegistroPage,
-    VerHorasExtraPage
+    VerHorasExtraPage,
+    AdminPage,
+    VerunidadesPage,
+    VerproyectosPage,
+    DashboardPage
   ],
   providers: [
     StatusBar,

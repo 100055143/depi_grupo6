@@ -17,7 +17,16 @@
                 <ion-label color="primary">Unidad:</ion-label>
                 <ion-input name="name" [(ngModel)]="units" placeholder="Unidad"></ion-input>
             </ion-item>
+            <ion-item>
+                <ion-label color="primary">Fecha desde:</ion-label>
+                <ion-datetime displayFormat="YYYY-MM-DD" name="fechadesde" [(ngModel)]="fechadesde" placeholder="Fecha desde"></ion-datetime>
+            </ion-item>
+            <ion-item>
+                <ion-label color="primary">Fecha hasta:</ion-label>
+                <ion-datetime displayFormat="YYYY-MM-DD" name="fechahasta" max="2030-12-31" [(ngModel)]="fechahasta" placeholder="Fecha hasta"></ion-datetime>
+            </ion-item>
         </ion-list>
-        <button ion-button block type="submit" [disabled]="!f.valid">Aceptar</button>
+
+        <button ion-button block type="submit" [disabled]="!f.valid">Añadir</button>
     </form>
 </ion-content>

@@ -1,7 +1,10 @@
-﻿export interface projects
+﻿import { Select} from "ionic-angular";
+import { DateTimeData } from "ionic-angular/util/datetime-util";
+
+export interface projects
 {
     key?: string;
     name: string;
-    fecha_desde: string;
-    fecha_hasta: string;
+    fechadesde: DateTimeData;
+    fechahasta: DateTimeData;
 }

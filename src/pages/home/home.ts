@@ -4,14 +4,14 @@ import { LoginPage } from '../login/login';
 import { AuthProvider } from '../../providers/auth/auth';
 import { TodoService } from '../../services/todo.service';
 import { RegisterService } from '../../services/register.service';
+import { AdminPage } from '../../pages/admin/admin';
+
 
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
 export class HomePage {
-
-
 
   public userName : string = null;
   public userUnidad : any = null;
@@ -41,4 +41,5 @@ export class HomePage {
       );
 
    }
+
 }

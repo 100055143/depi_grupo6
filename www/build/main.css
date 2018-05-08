@@ -25678,6 +25678,26 @@ ion-navbar.toolbar {
   min-height: calc(46px + env(safe-area-inset-bottom));
 }
 
+page-admin .center2 {
+  position: absolute;
+  left: 30%;
+  top: 25%;
+}
+
+page-admin .center {
+  position: absolute;
+  left: 29.5%;
+  top: 50%;
+}
+
+page-dashboard ion-card-header {
+  font-weight: bold;
+}
+
+page-dashboard .content {
+  height: 100%;
+}
+
 page-list ion-select {
   max-width: 70% !important;
 }

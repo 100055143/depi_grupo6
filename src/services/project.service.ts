@@ -1,5 +1,5 @@
 ﻿import { Injectable } from "@angular/core";
-import { AngularFireDatabase, AngularFireList } from "angularfire2/database"; //AngularFireList
+import { AngularFireDatabase, AngularFireList } from "angularfire2/database";
 import { projects } from "../model/projects.model";
 import { unit } from '../model/units.model';
 import { Observable } from 'rxjs/Observable';
@@ -12,14 +12,6 @@ import { map } from 'rxjs/operators';
 export class ProjectService{
 
     private projectRef = this.db.list<projects>('projects');
-
-
-    //public projects: Observable<projects[]>;
-
-    //public filteredProjects: FirebaseListObservable<projects[]>;
-
-    filteredProjects$: Observable<projects[]>;
-
 
     constructor(private db:AngularFireDatabase,
                 public alertCtrl: AlertController)
@@ -45,30 +37,5 @@ export class ProjectService{
     {
         return this.projectRef;
     }
-
-    /*
-    getFilterProjects(name: String) 
-    {
-        return this.filteredProjects$ = this.ProjectService
-      .getAllProjects()
-      .snapshotChanges()
-      .map(
-       changes => {
-         return changes.map(c=> ({
-           key: c.payload.key, ...c.payload.val()
-         }));
-       });
-    }*/
-
-
-
-    
-    /*
-        return this.filteredProjects = this.db.list<projects>('projects').subscribe(projects => 
-        {
-            this.projects.units = 'Unidad 1';
-        });
-    */
-
 
 }

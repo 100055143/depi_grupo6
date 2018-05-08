@@ -9,6 +9,8 @@ import { ListPage } from '../pages/list/list';
 import { AddUnitPage } from '../pages/add-unit/add-unit'
 import { AddProjectPage } from '../pages/add-project/add-project'
 import { AssignHoursPage } from '../pages/assign-hours/assign-hours';
+import { AdminPage } from '../pages/admin/admin';
+import { DashboardPage } from '../pages/dashboard/dashboard';
 
 
 @Component({
@@ -32,9 +34,9 @@ export class MyApp {
 
     this.pages = [
       { title: 'Home', component: HomePage },
+      { title: 'Administración', component: AdminPage},
       { title: 'Revisión de horas', component: ListPage },
-      { title: 'Añadir unidad', component: AddUnitPage },
-      { title: 'Añadir proyecto', component: AddProjectPage }
+      { title: 'Dashboards', component: DashboardPage }
 
     ];
 
@@ -47,7 +49,7 @@ export class MyApp {
       this.auth.Session.subscribe(session=>{
         if(session)
           {
-            this.rootPage = ListPage;
+            //this.rootPage = ListPage;
             this.hideLogout = false;
             this.userName = session.email;
 

@@ -1,14 +1,14 @@
 webpackJsonp([2],{
 
-/***/ 453:
+/***/ 461:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VerTodoPageModule", function() { return VerTodoPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VerproyectosPageModule", function() { return VerproyectosPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ver_horas_extra__ = __webpack_require__(290);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__verproyectos__ = __webpack_require__(144);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,23 +18,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var VerTodoPageModule = /** @class */ (function () {
-    function VerTodoPageModule() {
+var VerproyectosPageModule = /** @class */ (function () {
+    function VerproyectosPageModule() {
     }
-    VerTodoPageModule = __decorate([
+    VerproyectosPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__ver_horas_extra__["a" /* VerHorasExtraPage */],
+                __WEBPACK_IMPORTED_MODULE_2__verproyectos__["a" /* VerproyectosPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__ver_horas_extra__["a" /* VerHorasExtraPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__verproyectos__["a" /* VerproyectosPage */]),
             ],
         })
-    ], VerTodoPageModule);
-    return VerTodoPageModule;
+    ], VerproyectosPageModule);
+    return VerproyectosPageModule;
 }());
 
-//# sourceMappingURL=ver-horas-extra.module.js.map
+//# sourceMappingURL=verproyectos.module.js.map
 
 /***/ })
 

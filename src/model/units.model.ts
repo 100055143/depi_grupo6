@@ -1,8 +1,11 @@
-﻿export interface unit
+﻿import { Select} from "ionic-angular";
+import { DateTimeData } from "ionic-angular/util/datetime-util";
+
+export interface unit
 {
     key?: string;
     name: string;
-    fecha_deste: string;
-    fecha_hasta: string;
+    fechadeste: DateTimeData;
+    fechahasta: DateTimeData;
 
 }

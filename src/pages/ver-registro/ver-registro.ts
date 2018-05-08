@@ -3,13 +3,6 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Registro } from '../../model/registro.model';
 import { RegisterService } from '../../services/register.service';
 
-/**
- * Generated class for the VerContactoPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-
 @IonicPage()
 @Component({
   selector: 'page-ver-registro',

@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { AssignHoursPage } from '../assign-hours/assign-hours';
-import { UnitPage } from '../unit/unit';
 import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
 import { Observable } from 'rxjs/Observable';
 import { AuthProvider } from '../../providers/auth/auth';

@@ -52,6 +52,6 @@ export class AddProjectPage
   OnAddProject(value: projects, valueUnit: unit)
   {
     this.ProjectService.addProject(value, valueUnit).then(ref => { console.log(ref.key); });
-    this.navCtrl.push(ListPage);
+    this.navCtrl.pop();
   }
 }

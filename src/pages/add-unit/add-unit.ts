@@ -29,7 +29,7 @@ export class AddUnitPage {
   OnAddUnit(value: unit)
   {
     this.UnitService.addUnit(value).then(ref => { console.log(ref.key); });
-    this.navCtrl.push(ListPage);
+    this.navCtrl.pop();
   }
 
 }
