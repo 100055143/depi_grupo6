@@ -4,6 +4,8 @@ import { AddUnitPage } from '../add-unit/add-unit';
 import { unit } from '../../model/units.model';
 import { UnitService } from '../../services/unit.service';
 import { Observable } from 'rxjs/Observable';
+import { EditunitPage } from '../editunit/editunit';
+
 
 
 @IonicPage()
@@ -44,6 +46,11 @@ export class VerunidadesPage {
   onAddUnit()
   {
     this.navCtrl.push(AddUnitPage);
+  }
+
+  itemTapped($event, unit) 
+  {
+    this.navCtrl.push(EditunitPage, unit);
   }
 
 }

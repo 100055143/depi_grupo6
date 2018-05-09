@@ -4,6 +4,8 @@ import { projects } from '../../model/projects.model';
 import { AddProjectPage } from '../add-project/add-project';
 import { ProjectService } from '../../services/project.service';
 import { Observable } from 'rxjs/Observable';
+import { EditprojectPage } from '../editproject/editproject';
+
 
 @IonicPage()
 @Component({
@@ -42,4 +44,8 @@ export class VerproyectosPage {
     this.navCtrl.push(AddProjectPage);
   }
 
+  itemTapped($event, projects) 
+  {
+    this.navCtrl.push(EditprojectPage, projects);
+  }
 }

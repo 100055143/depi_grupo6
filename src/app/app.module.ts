@@ -18,6 +18,9 @@ import { VerHorasExtraPage } from '../pages/ver-horas-extra/ver-horas-extra';
 import { VerunidadesPage } from '../pages/verunidades/verunidades';
 import { VerproyectosPage } from '../pages/verproyectos/verproyectos';
 import { DashboardPage } from '../pages/dashboard/dashboard';
+import { EditunitPage } from '../pages/editunit/editunit';
+import { EditprojectPage } from '../pages/editproject/editproject';
+
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -63,7 +66,9 @@ export const firebaseConfig = {
     VerHorasExtraPage,
     VerunidadesPage,
     VerproyectosPage,
-    DashboardPage
+    DashboardPage,
+    EditunitPage,
+    EditprojectPage
   ],
   imports: [
     BrowserModule,
@@ -85,7 +90,9 @@ export const firebaseConfig = {
     AdminPage,
     VerunidadesPage,
     VerproyectosPage,
-    DashboardPage
+    DashboardPage,
+    EditunitPage,
+    EditprojectPage
   ],
   providers: [
     StatusBar,

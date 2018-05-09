@@ -1,0 +1,36 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Editar Proyecto</ion-title>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+    <ion-list>
+        <ion-item>
+            <ion-label color="primary">Unidad:</ion-label>
+            <ion-select placeholder="Unidad" name="units" [(ngModel)]="project.units" multiple="false">
+                <ion-option *ngFor="let item of units$ | async">{{item.name}}</ion-option>
+            </ion-select>
+        </ion-item>
+        <ion-item>
+            <ion-label color="primary">Proyecto:</ion-label>
+            <ion-input name="name" [(ngModel)]="project.name" placeholder="Proyecto"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Fecha desde:</ion-label>
+            <ion-datetime displayFormat="YYYY-MM-DD" name="fechaDesde" [(ngModel)]="project.fechadesde" placeholder="Fecha desde"></ion-datetime>
+        </ion-item>
+        <ion-item>
+            <ion-label>Fecha hasta:</ion-label>
+            <ion-datetime displayFormat="YYYY-MM-DD" name="fechaHasta" max="2030-12-31" [(ngModel)]="project.fechahasta" placeholder="Fecha hasta"></ion-datetime>
+        </ion-item>
+    </ion-list>
+
+    <button ion-button block (click)="onUpdate(project)">Modificar Registro</button>
+    <button ion-button block color="danger" (click)="onRemove(project)">Eliminar Registro</button>
+</ion-content>

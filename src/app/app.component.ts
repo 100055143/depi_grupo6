@@ -11,6 +11,7 @@ import { AddProjectPage } from '../pages/add-project/add-project'
 import { AssignHoursPage } from '../pages/assign-hours/assign-hours';
 import { AdminPage } from '../pages/admin/admin';
 import { DashboardPage } from '../pages/dashboard/dashboard';
+import { EditunitPage } from '../pages/editunit/editunit';
 
 
 @Component({

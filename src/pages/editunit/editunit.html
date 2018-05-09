@@ -1,0 +1,30 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Editar Unidad</ion-title>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+    <ion-list>
+        <ion-item>
+            <ion-label color="primary">Unidad:</ion-label>
+            <ion-input name="name" [(ngModel)]="units.name" placeholder="Unidad"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label color="primary">Fecha desde:</ion-label>
+            <ion-datetime displayFormat="YYYY-MM-DD" name="fechadesde" [(ngModel)]="units.fechadesde" placeholder="Fecha desde"></ion-datetime>
+        </ion-item>
+        <ion-item>
+            <ion-label color="primary">Fecha hasta:</ion-label>
+            <ion-datetime displayFormat="YYYY-MM-DD" name="fechahasta" max="2030-12-31" [(ngModel)]="units.fechahasta" placeholder="Fecha hasta"></ion-datetime>
+        </ion-item>
+    </ion-list>
+
+    <button ion-button block (click)="onUpdate(units)">Modificar Registro</button>
+
+    <button ion-button block color="danger" (click)="onRemove(units)">Eliminar Registro</button>
+</ion-content>
