@@ -1,14 +1,14 @@
 webpackJsonp([10],{
 
-/***/ 639:
+/***/ 652:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddUnitPageModule", function() { return AddUnitPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EditprojectPageModule", function() { return EditprojectPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__add_unit__ = __webpack_require__(148);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__editproject__ = __webpack_require__(155);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,23 +18,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var AddUnitPageModule = /** @class */ (function () {
-    function AddUnitPageModule() {
+var EditprojectPageModule = /** @class */ (function () {
+    function EditprojectPageModule() {
     }
-    AddUnitPageModule = __decorate([
+    EditprojectPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__add_unit__["a" /* AddUnitPage */],
+                __WEBPACK_IMPORTED_MODULE_2__editproject__["a" /* EditprojectPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__add_unit__["a" /* AddUnitPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__editproject__["a" /* EditprojectPage */]),
             ],
         })
-    ], AddUnitPageModule);
-    return AddUnitPageModule;
+    ], EditprojectPageModule);
+    return EditprojectPageModule;
 }());
 
-//# sourceMappingURL=add-unit.module.js.map
+//# sourceMappingURL=editproject.module.js.map
 
 /***/ })
 

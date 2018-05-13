@@ -5,6 +5,7 @@ import { AuthProvider } from '../../providers/auth/auth';
 import { TodoService } from '../../services/todo.service';
 import { RegisterService } from '../../services/register.service';
 import { AdminPage } from '../../pages/admin/admin';
+import { UserService } from '../../services/user.service';
 
 
 @Component({
@@ -19,7 +20,8 @@ export class HomePage {
   constructor(public navCtrl: NavController, 
               public auth : AuthProvider,
               private RegisterService: RegisterService,
-              private TodoService: TodoService) {
+              private TodoService: TodoService,
+              private UserService: UserService) {
 
   }
 
@@ -35,7 +37,8 @@ export class HomePage {
       if(session){
           this.userName = session.email;
           this.RegisterService.recibirmail(this.userName);
-          this.TodoService.recibirmail(this.userName);   
+          this.TodoService.recibirmail(this.userName);
+          this.UserService.recibirmail(this.userName);
                 }    
         }
       );

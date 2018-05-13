@@ -1,0 +1,38 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Relación<br />Unidad-Empleado</ion-title>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+    <form (ngSubmit)="onAddRelUnitEmpl(f.value)" #f="ngForm">
+        <ion-list>
+            <ion-item>
+                <ion-label color="primary">Unidad:</ion-label>
+                <ion-select placeholder="Unidad" name="unidad" [(ngModel)]="unidad" multiple="false">
+                    <ion-option *ngFor="let item of units$ | async">{{item.name}}</ion-option>
+                </ion-select>
+            </ion-item>
+            <ion-item>
+                <ion-label color="primary">Empleado:</ion-label>
+                <ion-select placeholder="Empleado" name="empleado" [(ngModel)]="empleado" multiple="false">
+                    <ion-option *ngFor="let item of empls$ | async">{{item.key}}</ion-option>
+                </ion-select>
+            </ion-item>
+            <ion-item>
+                <ion-label>Fecha desde:</ion-label>
+                <ion-datetime displayFormat="YYYY-MM-DD" name="fechadesde" [(ngModel)]="fechadesde" placeholder="Fecha desde"></ion-datetime>
+            </ion-item>
+            <ion-item>
+                <ion-label>Fecha hasta:</ion-label>
+                <ion-datetime displayFormat="YYYY-MM-DD" name="fechahasta" max="2030-12-31" [(ngModel)]="fechahasta" placeholder="Fecha hasta"></ion-datetime>
+            </ion-item>
+        </ion-list>
+        <button ion-button block type="submit" [disabled]="!f.valid">Añadir</button>
+    </form>
+
+</ion-content>

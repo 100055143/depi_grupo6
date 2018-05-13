@@ -10,5 +10,5 @@ export interface Tarea {
     minutos: number;
     fecha: DateTimeData;
     valid: boolean;
-    
+    novalid: boolean;
 }

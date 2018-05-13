@@ -20,13 +20,19 @@ import { VerproyectosPage } from '../pages/verproyectos/verproyectos';
 import { DashboardPage } from '../pages/dashboard/dashboard';
 import { EditunitPage } from '../pages/editunit/editunit';
 import { EditprojectPage } from '../pages/editproject/editproject';
-
+import { RelunidadempleadoPage } from '../pages/relunidadempleado/relunidadempleado';
+import { VerempleadoPage } from '../pages/verempleado/verempleado';
+import { AltaempleadoPage } from '../pages/altaempleado/altaempleado';
+import { EditempleadoPage } from '../pages/editempleado/editempleado';
+import { RelunitprojectPage } from '../pages/relunitproject/relunitproject';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { AuthProvider } from '../providers/auth/auth';
 import { UnitService } from '../services/unit.service';
 import { ProjectService } from '../services/project.service';
+import { RelUnitEmplService } from '../services/relunitempl.service';
+import { UserService } from '../services/user.service';
 
 import { TodoService } from '../services/todo.service';
 import { RegisterService } from '../services/register.service';
@@ -68,7 +74,12 @@ export const firebaseConfig = {
     VerproyectosPage,
     DashboardPage,
     EditunitPage,
-    EditprojectPage
+    EditprojectPage,
+    RelunidadempleadoPage,
+    VerempleadoPage,
+    AltaempleadoPage,
+    EditempleadoPage,
+    RelunitprojectPage
   ],
   imports: [
     BrowserModule,
@@ -92,7 +103,12 @@ export const firebaseConfig = {
     VerproyectosPage,
     DashboardPage,
     EditunitPage,
-    EditprojectPage
+    EditprojectPage,
+    RelunidadempleadoPage,
+    VerempleadoPage,
+    AltaempleadoPage,
+    EditempleadoPage,
+    RelunitprojectPage
   ],
   providers: [
     StatusBar,
@@ -102,7 +118,9 @@ export const firebaseConfig = {
     UnitService,
     ProjectService,
     TodoService,
-    RegisterService
+    RegisterService,
+    RelUnitEmplService,
+    UserService
   ]
 })
 export class AppModule {}

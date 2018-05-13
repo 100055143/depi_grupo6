@@ -2,9 +2,9 @@
 
   <ion-navbar>
     <ion-title>Login</ion-title>
-        <button ion-button menuToggle>
+        <!--<button ion-button menuToggle>
             <ion-icon name="menu"></ion-icon>
-        </button>
+        </button>-->
     </ion-navbar>
 </ion-header>
 
@@ -14,7 +14,6 @@
     <div align="center">
         <ion-img width="80" height="80" src="assets/imgs/timemanagement.png"></ion-img>
     </div>
-
     <ion-list>
         <ion-item>
             <ion-input [(ngModel)]="user.email"
@@ -33,9 +32,6 @@
                        required>
             </ion-input>
         </ion-item>
-
     </ion-list>
-
     <button ion-button type="submit" color="primary" block (click)="OnLogin()">Acceder</button>
-    <button ion-button (click)="signin()" type="submit" color="secondary" block>Registrarse</button>
 </ion-content>
