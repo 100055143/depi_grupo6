@@ -1,0 +1,18 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Admnistración</ion-title>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+    <ion-col width-50 class="center2">
+        <button ion-button large (click)="onViewUnits()">Unidades</button>
+    </ion-col>
+    <ion-col width-50 class="center">
+        <button ion-button large (click)="onViewProjects()">Proyectos</button>
+    </ion-col>
+</ion-content>

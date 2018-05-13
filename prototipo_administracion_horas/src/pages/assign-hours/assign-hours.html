@@ -1,0 +1,38 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Assign Time</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <form (ngSubmit)="OnAdd(f.value)" #f="ngForm">
+        <ion-list>
+            <ion-item>
+                <ion-label color="primary">Unit:</ion-label>
+                <ion-select name="units" [(ngModel)]="units" multiple="false">
+                    <ion-option *ngFor="let item of units$ | async">
+                        {{item.name}}
+                    </ion-option>
+                </ion-select>
+            </ion-item>
+
+            <ion-item>
+                <ion-label color="primary">Project:</ion-label>
+                <ion-select name="projects" [(ngModel)]="projects" multiple="false">
+                    <ion-option *ngFor="let item of projects$ | async">
+                        {{item.name}}
+                    </ion-option>
+                </ion-select>
+            </ion-item>
+
+
+                                                                  
+        </ion-list>
+
+
+        <button ion-button block type="submit" [disabled]="!f.valid">Add Time</button>
+    </form>
+</ion-content>

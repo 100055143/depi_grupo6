@@ -1,0 +1,8 @@
+{
+  "name": "TimeManagement",
+  "app_id": "ef228b12",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
