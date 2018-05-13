@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Datos del Empleado</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <h1>Bienvenido</h1>
+    <img  width="80" height="80" src="assets/imgs/infologo.jpg" class="center"/>
+  <p><strong>Usuario: </strong>{{userName}}</p>
+ 
+  <p><strong>Unidad: </strong>{{userUnidad}}</p>
+  
+  
+  <button ion-button block (click)="cerrarSesion()"color="danger">Cerrar Sesión</button>
+  
+  
+  
+
+  
+
+
+</ion-content>
