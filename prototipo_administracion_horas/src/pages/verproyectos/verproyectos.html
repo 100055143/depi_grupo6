@@ -12,7 +12,7 @@
 
     <ion-list>
         <button ion-item *ngFor="let item of projects$ | async" (click)="itemTapped($event, item)">
-            <p><strong>Unidad:</strong> {{ item.units }}</p>
+            <!--<p><strong>Unidad:</strong> {{ item.units }}</p>-->
             <p><strong>Proyecto:</strong> {{ item.name }}</p>
             <p><strong>Fecha desde:</strong> {{ item.fechadesde }} </p>
             <p><strong>Fecha hasta:</strong> {{ item.fechahasta }} </p>

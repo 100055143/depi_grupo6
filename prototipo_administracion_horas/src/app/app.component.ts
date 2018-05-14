@@ -12,6 +12,8 @@ import { AssignHoursPage } from '../pages/assign-hours/assign-hours';
 import { AdminPage } from '../pages/admin/admin';
 import { DashboardPage } from '../pages/dashboard/dashboard';
 import { EditunitPage } from '../pages/editunit/editunit';
+import { RelunidadempleadoPage } from '../pages/relunidadempleado/relunidadempleado';
+import { VerempleadoPage } from '../pages/verempleado/verempleado';
 
 
 @Component({
@@ -35,7 +37,8 @@ export class MyApp {
 
     this.pages = [
       { title: 'Home', component: HomePage },
-      { title: 'Administración', component: AdminPage},
+      { title: 'Administración', component: AdminPage },
+      { title: 'Empleados', component: VerempleadoPage },
       { title: 'Revisión de horas', component: ListPage },
       { title: 'Dashboards', component: DashboardPage }
 
@@ -53,7 +56,7 @@ export class MyApp {
             //this.rootPage = ListPage;
             this.hideLogout = false;
             this.userName = session.email;
-
+            this.rootPage = HomePage;
           }
           else
           {
@@ -76,6 +79,7 @@ export class MyApp {
   {
       this.auth.logout();
       this.hideLogout = true;
+      this.nav.push(LoginPage);
   }
  
 }

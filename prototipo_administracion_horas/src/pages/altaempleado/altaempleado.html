@@ -1,0 +1,66 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Alta Empleado</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <form (ngSubmit)="onAddUser(f.value)" #f="ngForm">
+        <ion-list>
+
+            <ion-item>
+                <ion-label color="primary">Unidad:</ion-label>
+                <ion-select placeholder="Unidad" name="units" [(ngModel)]="user.unidad" multiple="false">
+                    <ion-option *ngFor="let item of units$ | async">{{item.name}}</ion-option>
+                </ion-select>
+            </ion-item>
+
+            <ion-item>
+                <ion-label color="primary">Nombre:</ion-label>
+                <ion-input [(ngModel)]="user.nombre"
+                           name="nombre"
+                           type="text"
+                           placeholder="Nombre empleado"
+                           autocapitalize="off"
+                           required>
+                </ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label color="primary">Email:</ion-label>
+                <ion-input [(ngModel)]="user.email"
+                           name="email"
+                           type="text"
+                           placeholder="User email"
+                           autocapitalize="off"
+                           required>
+                </ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label color="primary">Password:</ion-label>
+                <ion-input [(ngModel)]="user.password"
+                           name="password"
+                           placeholder="Password"
+                           type="password"
+                           required>
+                </ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label color="primary">Fecha desde:</ion-label>
+                <ion-datetime displayFormat="YYYY-MM-DD" name="fechadesde" [(ngModel)]="user.fechadesde" placeholder="Fecha desde"></ion-datetime>
+            </ion-item>
+
+            <ion-item>
+                <ion-label color="primary">Fecha hasta:</ion-label>
+                <ion-datetime displayFormat="YYYY-MM-DD" name="fechahasta" max="2030-12-31" [(ngModel)]="user.fechahasta" placeholder="Fecha hasta"></ion-datetime>
+            </ion-item>
+
+        </ion-list>
+
+        <button ion-button (click)="signin()" type="submit" color="secondary" block>Registrar empleado</button>
+     </form>
+</ion-content>

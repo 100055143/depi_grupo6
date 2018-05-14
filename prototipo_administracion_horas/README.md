@@ -1,1 +1,1 @@
-# Prototipo de Administración de Gestión de Horas.
+# depi_grupo6

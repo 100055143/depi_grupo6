@@ -10,4 +10,5 @@ export interface Registro {
     minutos: number;
     fecha: DateTimeData;
     valid: boolean;
+    novalid: boolean;
 }

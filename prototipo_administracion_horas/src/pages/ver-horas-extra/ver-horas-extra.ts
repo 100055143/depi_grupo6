@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Tarea } from '../../model/todo.model';
 import { TodoService } from '../../services/todo.service';
+import { concat } from 'rxjs/operators/concat';
 
 
 @IonicPage()
@@ -31,6 +32,14 @@ export class VerHorasExtraPage {
 
   }
 
-  
+    onChangeNoValid(value: Tarea)
+    {
+        value.valid = false;
+    }
+
+    onChangeValid(value: Tarea)
+    {
+        value.novalid = false;
+    }
     
   }

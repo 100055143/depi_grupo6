@@ -1,14 +1,14 @@
 webpackJsonp([3],{
 
-/***/ 643:
+/***/ 659:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VerRegistroPageModule", function() { return VerRegistroPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VerempleadoPageModule", function() { return VerempleadoPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ver_registro__ = __webpack_require__(154);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__verempleado__ = __webpack_require__(163);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,23 +18,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var VerRegistroPageModule = /** @class */ (function () {
-    function VerRegistroPageModule() {
+var VerempleadoPageModule = /** @class */ (function () {
+    function VerempleadoPageModule() {
     }
-    VerRegistroPageModule = __decorate([
+    VerempleadoPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__ver_registro__["a" /* VerRegistroPage */],
+                __WEBPACK_IMPORTED_MODULE_2__verempleado__["a" /* VerempleadoPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__ver_registro__["a" /* VerRegistroPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__verempleado__["a" /* VerempleadoPage */]),
             ],
         })
-    ], VerRegistroPageModule);
-    return VerRegistroPageModule;
+    ], VerempleadoPageModule);
+    return VerempleadoPageModule;
 }());
 
-//# sourceMappingURL=ver-registro.module.js.map
+//# sourceMappingURL=verempleado.module.js.map
 
 /***/ })
 

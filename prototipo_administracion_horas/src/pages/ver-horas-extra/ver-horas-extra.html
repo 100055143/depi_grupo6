@@ -15,60 +15,55 @@
 
 
 <ion-content padding>
-
-  <ion-item>
-    <ion-label>Unidad</ion-label>
-    <ion-select type="ion-select" [(ngModel)]="tareap.unidad"  name="unidad" ngModel required>
-      <ion-option>Unidad 1</ion-option>
-      <ion-option>Unidad 2</ion-option>
-      <ion-option>Unidad 3</ion-option>
-    </ion-select>
-  </ion-item>
-
-  <ion-item>
-    <ion-label>Proyecto</ion-label>
-    <ion-select *ngIf="tareap.unidad== 'Unidad 1'" [(ngModel)]="tareap.proyecto" multiple="false" name="proyecto">
-      <ion-option>Proyecto 1 unidad 1</ion-option>
-      <ion-option>Proyecto 2 unidad 1</ion-option>
-      <ion-option>Proyecto 3 unidad 1</ion-option>
-    </ion-select>
-
-    <ion-select *ngIf="tareap.unidad== 'Unidad 2'" [(ngModel)]="tareap.proyecto" multiple="false" name="proyecto">
-        <ion-option>Proyecto 1 unidad 2</ion-option>
-        <ion-option>Proyecto 2 unidad 2</ion-option>
-        <ion-option>Proyecto 3 unidad 2</ion-option>
-      </ion-select>
-    
-    <ion-select *ngIf="tareap.unidad== 'Unidad 3'" [(ngModel)]="tareap.proyecto" multiple="false" name="proyecto">
-        <ion-option>Proyecto 1 unidad 3</ion-option>
-        <ion-option>Proyecto 2 unidad 3</ion-option>
-        <ion-option>Proyecto 3 unidad 3</ion-option>
-      </ion-select>
-    
-  </ion-item>
-
-  <ion-item>
-      <ion-label>Horas</ion-label>
-      <ion-input type="number" [(ngModel)]="tareap.horas" min="0" max="8"name="horas" ngModel></ion-input>
-  </ion-item>
-
-  <ion-item>
-    <ion-label>Minutos</ion-label>
-    <ion-input type="number" [(ngModel)]="tareap.minutos" min="0" max="59" name="minutos" ngModel></ion-input>
-  </ion-item>
-
-  <ion-item>
-      <ion-label>Fecha</ion-label>
-      <ion-datetime displayFormat="YYYY-MM-DD" [(ngModel)]="tareap.fecha" name="fecha" ngModel></ion-datetime>
+    <ion-item>
+        <ion-label>Unidad</ion-label>
+        <ion-select disabled="true" type="ion-select" [(ngModel)]="tareap.unidad" name="unidad" ngModel required>
+            <ion-option>Unidad 1</ion-option>
+            <ion-option>Unidad 2</ion-option>
+            <ion-option>Unidad 3</ion-option>
+        </ion-select>
     </ion-item>
+    <ion-item>
+        <ion-label>Proyecto</ion-label>
+        <ion-select disabled="true" *ngIf="tareap.unidad== 'Unidad 1'" [(ngModel)]="tareap.proyecto" multiple="false" name="proyecto">
+            <ion-option>Proyecto 1 unidad 1</ion-option>
+            <ion-option>Proyecto 2 unidad 1</ion-option>
+            <ion-option>Proyecto 3 unidad 1</ion-option>
+        </ion-select>
+        <ion-select disabled="true" *ngIf="tareap.unidad== 'Unidad 2'" [(ngModel)]="tareap.proyecto" multiple="false" name="proyecto">
+            <ion-option>Proyecto 1 unidad 2</ion-option>
+            <ion-option>Proyecto 2 unidad 2</ion-option>
+            <ion-option>Proyecto 3 unidad 2</ion-option>
+        </ion-select>
 
+        <ion-select disabled="true" *ngIf="tareap.unidad== 'Unidad 3'" [(ngModel)]="tareap.proyecto" multiple="false" name="proyecto">
+            <ion-option>Proyecto 1 unidad 3</ion-option>
+            <ion-option>Proyecto 2 unidad 3</ion-option>
+            <ion-option>Proyecto 3 unidad 3</ion-option>
+        </ion-select>
+
+    </ion-item>
+    <ion-item>
+        <ion-label>Horas</ion-label>
+        <ion-input type="number" disabled="true" [(ngModel)]="tareap.horas" min="0" max="8" name="horas" ngModel></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label>Minutos</ion-label>
+        <ion-input  type="number" disabled="true" [(ngModel)]="tareap.minutos" min="0" max="59" name="minutos" ngModel></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label>Fecha</ion-label>
+        <ion-datetime disabled="true" displayFormat="YYYY-MM-DD" [(ngModel)]="tareap.fecha" name="fecha" ngModel></ion-datetime>
+    </ion-item>
     <ion-item>
         <ion-label>Válido: </ion-label>
-        <ion-checkbox item-right type="boolean" [(ngModel)]="tareap.valid" ngModel name="valid"></ion-checkbox>
+        <ion-checkbox item-right type="boolean" [(ngModel)]="tareap.valid" ngModel name="valid" (ionChange)="onChangeValid(tareap)"></ion-checkbox>
+    </ion-item>
+    <ion-item>
+        <ion-label>No válido: </ion-label>
+        <ion-checkbox item-right type="boolean" [(ngModel)]="tareap.novalid" ngModel name="novalid" (ionChange)="onChangeNoValid(tareap)"></ion-checkbox>
     </ion-item>
 
-<button ion-button block (click)="onUpdateTarea(tareap)">Modificar Registro</button>
-
-<button ion-button block (click)="onRemoveTarea(tareap)">Eliminar Registro</button>
-
+    <button ion-button block (click)="onUpdateTarea(tareap)">Modificar Registro</button>
+    <button ion-button block (click)="onRemoveTarea(tareap)">Eliminar Registro</button>
 </ion-content>

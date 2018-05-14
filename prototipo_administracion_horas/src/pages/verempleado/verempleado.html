@@ -1,0 +1,23 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Empleados</ion-title>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+    <ion-icon ion-button (click)="onAddUser()"> + </ion-icon>
+
+    <ion-list>
+        <button ion-item *ngFor="let item of users$ | async" (click)="itemTapped($event, item.key)">
+            <p><strong>Empleado:</strong> {{ item.key }}</p>
+        </button>
+    </ion-list>
+
+
+
+</ion-content>

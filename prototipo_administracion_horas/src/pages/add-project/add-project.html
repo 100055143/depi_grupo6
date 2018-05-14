@@ -13,12 +13,12 @@
 <ion-content padding>
     <form (ngSubmit)="OnAddProject(f.value)" #f="ngForm">
         <ion-list>
-            <ion-item>
+            <!--<ion-item>
                 <ion-label color="primary">Unidad:</ion-label>
                 <ion-select placeholder="Unidad" name="units" [(ngModel)]="units" multiple="false">
                     <ion-option *ngFor="let item of units$ | async">{{item.name}}</ion-option>
                 </ion-select>
-            </ion-item>
+            </ion-item>-->
 
             <ion-item>
                 <ion-label color="primary">Proyecto:</ion-label>

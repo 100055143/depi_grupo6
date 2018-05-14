@@ -33,6 +33,14 @@ export class VerRegistroPage {
 
   }
 
-  
+    onChangeNoValid(value: Registro)
+    {
+        value.valid = false;
+    }
+
+    onChangeValid(value: Registro)
+    {
+        value.novalid = false;
+    }
 
 }
