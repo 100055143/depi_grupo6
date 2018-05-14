@@ -1,0 +1,41 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Relación <br/> Unidad-Proyecto</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <form (ngSubmit)="OnAddProject(f.value)" #f="ngForm">
+        <ion-list>
+            <ion-item>
+                <ion-label color="primary">Unidad:</ion-label>
+                <ion-select placeholder="Unidad" name="units" [(ngModel)]="units" multiple="false">
+                    <ion-option *ngFor="let item of units$ | async">{{item.name}}</ion-option>
+                </ion-select>
+            </ion-item>
+
+            <ion-item>
+                <ion-label color="primary">Proyecto:</ion-label>
+                <ion-select placeholder="Proyecto" name="projects" [(ngModel)]="projects" multiple="false">
+                    <ion-option *ngFor="let item of projects$ | async">{{item.name}}</ion-option>
+                </ion-select>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>Fecha desde:</ion-label>
+                <ion-datetime displayFormat="YYYY-MM-DD" name="fechadesde" [(ngModel)]="fechadesde" placeholder="Fecha desde"></ion-datetime>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>Fecha hasta:</ion-label>
+                <ion-datetime displayFormat="YYYY-MM-DD" name="fechahasta" max="2030-12-31" [(ngModel)]="fechahasta" placeholder="Fecha hasta"></ion-datetime>
+            </ion-item>
+        </ion-list>
+
+        <button ion-button block type="submit" [disabled]="!f.valid">Aceptar</button>
+    </form>
+
+</ion-content>

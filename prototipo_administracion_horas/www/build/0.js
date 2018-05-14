@@ -1,14 +1,14 @@
 webpackJsonp([0],{
 
-/***/ 639:
+/***/ 649:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AssignHoursPageModule", function() { return AssignHoursPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__assign_hours__ = __webpack_require__(646);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__assign_hours__ = __webpack_require__(662);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -38,16 +38,16 @@ var AssignHoursPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 646:
+/***/ 662:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AssignHoursPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angularfire2_database__ = __webpack_require__(31);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_unit_service__ = __webpack_require__(49);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_project_service__ = __webpack_require__(88);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angularfire2_database__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_unit_service__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_project_service__ = __webpack_require__(52);
 var __assign = (this && this.__assign) || Object.assign || function(t) {
     for (var s, i = 1, n = arguments.length; i < n; i++) {
         s = arguments[i];
@@ -102,7 +102,7 @@ var AssignHoursPage = /** @class */ (function () {
     };
     AssignHoursPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-assign-hours',template:/*ion-inline-start:"/Users/JoseAntonioDeLaFuenteBrando/Documents/GitHub/IonicTimeManagementApp/src/pages/assign-hours/assign-hours.html"*/'<ion-header>\n\n  <ion-navbar>\n    <ion-title>Assign Time</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n    <form (ngSubmit)="OnAdd(f.value)" #f="ngForm">\n\n        <ion-list>\n            <ion-item>\n\n                <ion-label color="primary">Unit:</ion-label>\n\n                <ion-select name="units" [(ngModel)]="units" multiple="false">\n\n                    <ion-option *ngFor="let item of units$ | async">\n\n                        {{item.name}}\n\n                    </ion-option>\n\n                </ion-select>\n\n            </ion-item>\n\n            <ion-item>\n\n                <ion-label color="primary">Project:</ion-label>\n\n                <ion-select name="projects" [(ngModel)]="projects" multiple="false">\n\n                    <ion-option *ngFor="let item of projects$ | async">\n\n                        {{item.name}}\n\n                    </ion-option>\n\n                </ion-select>\n\n            </ion-item>\n\n\n\n                                                                  \n\n        </ion-list>\n\n\n        <button ion-button block type="submit" [disabled]="!f.valid">Add Time</button>\n\n    </form>\n</ion-content>'/*ion-inline-end:"/Users/JoseAntonioDeLaFuenteBrando/Documents/GitHub/IonicTimeManagementApp/src/pages/assign-hours/assign-hours.html"*/,
+            selector: 'page-assign-hours',template:/*ion-inline-start:"/Users/JoseAntonioDeLaFuenteBrando/Documents/GitHub/depi_grupo6/prototipo_administracion_horas/src/pages/assign-hours/assign-hours.html"*/'<ion-header>\n\n  <ion-navbar>\n    <ion-title>Assign Time</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n    <form (ngSubmit)="OnAdd(f.value)" #f="ngForm">\n\n        <ion-list>\n            <ion-item>\n\n                <ion-label color="primary">Unit:</ion-label>\n\n                <ion-select name="units" [(ngModel)]="units" multiple="false">\n\n                    <ion-option *ngFor="let item of units$ | async">\n\n                        {{item.name}}\n\n                    </ion-option>\n\n                </ion-select>\n\n            </ion-item>\n\n            <ion-item>\n\n                <ion-label color="primary">Project:</ion-label>\n\n                <ion-select name="projects" [(ngModel)]="projects" multiple="false">\n\n                    <ion-option *ngFor="let item of projects$ | async">\n\n                        {{item.name}}\n\n                    </ion-option>\n\n                </ion-select>\n\n            </ion-item>\n\n\n\n                                                                  \n\n        </ion-list>\n\n\n        <button ion-button block type="submit" [disabled]="!f.valid">Add Time</button>\n\n    </form>\n</ion-content>'/*ion-inline-end:"/Users/JoseAntonioDeLaFuenteBrando/Documents/GitHub/depi_grupo6/prototipo_administracion_horas/src/pages/assign-hours/assign-hours.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */],

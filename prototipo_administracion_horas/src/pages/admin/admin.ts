@@ -2,6 +2,10 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { VerunidadesPage } from '../verunidades/verunidades';
 import { VerproyectosPage } from '../verproyectos/verproyectos';
+import { RelunidadempleadoPage } from '../relunidadempleado/relunidadempleado';
+import { AddProjectPage } from '../add-project/add-project';
+import { RelunitprojectPage } from '../relunitproject/relunitproject';
+
 
 @IonicPage()
 @Component({
@@ -24,7 +28,17 @@ export class AdminPage {
 
   onViewProjects()
   {
-    this.navCtrl.push(VerproyectosPage)
+    this.navCtrl.push(VerproyectosPage);
+  }
+
+  onViewRelUnitEmployee()
+  {
+    this.navCtrl.push(RelunidadempleadoPage);
+  }
+
+  onViewRelUnitProject()
+  {
+    this.navCtrl.push(RelunitprojectPage);
   }
 
 }

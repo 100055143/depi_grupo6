@@ -9,6 +9,7 @@ export class TodoService{
     public tabla : string;
 
     private tareasRef;
+    private horasRef;
 
     constructor(private db:AngularFireDatabase){
 
@@ -23,21 +24,26 @@ export class TodoService{
     }
     addTarea(value: Tarea){
     
-        return this.tareasRef.push(value);
+        return this.horasRef.push(value);
     }
 
     updateTarea(value: Tarea){
 
-        return this.tareasRef.update(value.key,value);
+        return this.horasRef.update(value.key,value);
     }
 
     removeTarea(value: Tarea){
         
-        return this.tareasRef.remove(value.key);
+        return this.horasRef.remove(value.key);
     }
 
     getTarea(){
         
         return this.tareasRef;
+    }
+
+    getHoras(value: string)
+    {
+        return this.horasRef=this.db.list<Tarea>('Usuarios/' + value + '/Horas Extra');
     }
 }

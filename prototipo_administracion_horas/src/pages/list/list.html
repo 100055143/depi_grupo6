@@ -8,9 +8,6 @@
 </ion-header>
 
 <ion-content>
-    <div align="center">
-        <p><strong> {{userName}} </strong></p>
-    </div>
     <div>
         <ion-select placeholder="Seleccione unidad" type="ion-select" [(ngModel)]="unidad" name="unidad" ngModel required>
             <ion-option *ngFor="let item of units$ | async">
@@ -19,29 +16,17 @@
         </ion-select>
     </div>
 
+    <ion-list *ngFor="let item of users$ | async">
 
+        <p align="center"><strong>Empleado:</strong> {{ item.key }}</p>
+        <hr />
 
-    <!--<ion-select [(ngModel)]="task">
-        <ng-container *ngFor="let task of tasks">
-            <ion-option [value]="task" *ngIf="task.ProjectId == project.Id">{{task.Title}}</ion-option>
-        </ng-container>
-    </ion-select>-->
-
-
-    <ion-list>
-
-       <!-- <button ion-item *ngFor="let item of dbs$ | async" (click)="itemTapped($event, item)">
-            <p> {{item}}</p>
-        </button>-->
-
-        <button ion-item *ngFor="let item of registros$ | async" (click)="itemTapped($event, item)">
-            <!--<ng-container [value]="item" *ngIf="item.unit == unidad">-->
-                <p><strong>Nombre del proyecto: </strong>{{item.proyecto}}</p>
-                <p><strong>Horas: </strong>{{item.horas}}</p>
-                <p><strong>Minutos: </strong>{{item.minutos}}</p>
-                <p><strong>Fecha: </strong>{{item.fecha}}</p>
-                <p><strong>Tipo: </strong> Horas normales</p>
-            <!--</ng-container>-->
+        <button ion-item *ngFor="let item of horasIngresadas$ | async" (click)="itemTapped($event, item)">
+            <p><strong>Nombre del proyecto: </strong></p>
+            <p><strong>Horas: </strong>{{item.horas}}</p>
+            <p><strong>Minutos: </strong>{{item.minutos}}</p>
+            <p><strong>Fecha: </strong>{{item.fecha}}</p>
+            <p><strong>Tipo: </strong> Horas normales</p>
         </button>
 
         <button ion-item *ngFor="let item of tareas$ | async" (click)="itemExtraTapped($event, item)">
@@ -52,7 +37,7 @@
             <p><strong>Fecha: </strong>{{item.fecha}}</p>
             <p><strong>Tipo:</strong> Horas extra</p>
         </button>
-        
+
     </ion-list>
     
 </ion-content>
