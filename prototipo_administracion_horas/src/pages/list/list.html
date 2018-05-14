@@ -22,7 +22,7 @@
         <hr />
 
         <button ion-item *ngFor="let item of horasIngresadas$ | async" (click)="itemTapped($event, item)">
-            <p><strong>Nombre del proyecto: </strong></p>
+            <p><strong>Nombre del proyecto: </strong>{{item.proyecto}}</p>
             <p><strong>Horas: </strong>{{item.horas}}</p>
             <p><strong>Minutos: </strong>{{item.minutos}}</p>
             <p><strong>Fecha: </strong>{{item.fecha}}</p>
